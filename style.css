@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing:border-box; */
+}
+body::before{
+    content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    background-image: url('veges.jpeg') ;
+    background-repeat: no-repeat ;
+    background-size: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    /* background: linen; */
+    /* position: absolute; */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.meal-search{
+    text-align: center;
+    padding: 40px;
+}
+.meal-search-box{
+    margin:1.7rem 0;
+    display: flex;
+    align-items: stretch;
+}
+.title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: #1d1402;
+}
+blockquote,cite{
+    font-size:large;
+    padding: 15px;
+    font-weight: bold;
+}
+.search-control ,.search-btn{
+    width: 100%;
+}
+.search-control{
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    outline: none;
+    border:4px solid rgb(128, 99, 99) ;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    color: #533b0eb7;
+}
+.search-control::placeholder{
+    color: #5a451b;
+} 
+.search-btn{
+    width: 55px;
+    height: 50px;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    padding-right: 4px;
+    margin: 0;
+    border: 4px solid rgb(128, 99, 99) ;
+    background-color: #ab9e84d6;
+    font-size: 1.7rem;
+    transition: all 0.4s linear;
+}
+.search-btn:hover{
+    background-color: #88785ad6;
+}
+.meal-result{
+    margin-top: 4rem;
+    text-align: center;
+}
+#meal{
+    margin: 2.4rem 0;
+}
+
+.meal-item{
+    border-radius: 1rem;
+    overflow:hidden ;
+    box-shadow: 0 4px 21px -12px rgba(0,0,0,0.8);
+    margin: 2rem;;
+}
+
+.meal-img img{
+    width: 100%;
+    display: block;
+}
+.meal-name{
+    padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+  font-size: 1.5rem;
+}
+.recipee-btn{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    background: #755b27;
+font-size: 1.1rem;    border-radius: 2rem;
+    padding: 0.75rem 0;
+    margin: 1.1rem auto;
+    width: 175px;
+    display: block;
+    transition: all 0.4s linear;
+}
+.recipee-btn:hover{
+    background-color: #443312;
+}
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    color: linen;
+    background-color:#5a451b ;
+    border-radius: 1rem;
+    width:90%;
+    height: 90%;
+    overflow:scroll;
+    display: none ;
+     padding: 2rem;
+}
+.meal-details::-webkit-scrollbar{
+    width: 15px;
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 2rem;
+}
+.showRecipee{
+    display: block;
+}
+.meal-details-content{
+  margin: 2rem;
+}
+.recipee-close-btn{
+    background: none;
+    color:white;
+    font-size: 1rem;
+    position: absolute;
+    right:2rem
+}
+.meal-details-content p:not(.recipee-category){
+ /* isme only p hi change hoga */
+ padding:1rem 0 ;
+}
+.recipee-title,.recipee-category{
+    text-align: center;
+}
+.recipee-instruction h3{
+    text-align: center;
+}
+.recipee-meal-img{
+    text-align: center;
+}
+.recipee-meal-img img{
+    height: 600px;
+    width: 600px;
+}
+.recipee-link {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.recipee-link a{
+    text-decoration: none;
+    color: #443312;
+    background-color: linen;
+    /* text-align: center; */
+    padding: 0.6rem;
+    border-radius: 50px;
+    /* width: 100%; */
+}
+@media screen and (min-width:600px){
+    .meal-search-box{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width:650px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1.1rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+
+    .meal-details{
+        width: 700px;
+    }
+}
+@media screen and (min-width:992px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
